@@ -5,6 +5,10 @@ class HistoriesController < ApplicationController
   # GET /histories
   # GET /histories.json
   def index
+    @histories = History.all
+  end
+
+  def my_histories
     @histories = History.where user_id: helpers.current_user.id
   end
 

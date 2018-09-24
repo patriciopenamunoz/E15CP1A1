@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'histories/my_histories'
   resources :histories
   get 'users/sign_up', to: 'users#new'
   post 'users', to: 'users#create'

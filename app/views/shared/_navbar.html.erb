@@ -18,6 +18,7 @@
           <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% if logged? %>
+            <li><%= link_to 'My histories', histories_my_histories_path %></li>
             <li><%= link_to 'Close session', sessions_path, method: :delete %></li>
             <% else %>
             <li><%= link_to 'Sign in', users_sign_in_path %></li>
